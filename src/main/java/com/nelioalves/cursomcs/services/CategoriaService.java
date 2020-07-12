@@ -1,5 +1,6 @@
 package com.nelioalves.cursomcs.services;
 
+//Regra de negocio
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,10 +12,11 @@ import com.nelioalves.cursomcs.repositories.CategoriaRepository;
 @Service
 public class CategoriaService {
 	
+//	para instanciar @autowired
 	@Autowired
 	private CategoriaRepository repo;
 	
-	
+//	Buscar uma categoria por codigo ele tem que pegar do repository
 	public Categoria buscar(Integer id) {
 		 Optional<Categoria> obj = repo.findById(id);
 		return obj.orElse(null);
