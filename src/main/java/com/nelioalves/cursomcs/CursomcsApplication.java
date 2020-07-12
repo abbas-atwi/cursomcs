@@ -14,7 +14,7 @@ import com.nelioalves.cursomcs.repositories.ProdutoRepository;
 
 @SpringBootApplication
 public class CursomcsApplication implements CommandLineRunner{
-
+//Criar as dependencias 
 	@Autowired
 	private CategoriaRepository categoriaRepository;
 	
@@ -37,7 +37,7 @@ public class CursomcsApplication implements CommandLineRunner{
 		
 //		Fazer o associamento / as categorias ja conhecem quais produtos e estao associadas a eles, porem os produtos ainda nao
 		cat1.getProdutos().addAll(Arrays.asList(p1,p2,p3));
-		cat2.getProdutos().addAll(Arrays.asList(p3));
+		cat2.getProdutos().addAll(Arrays.asList(p2));
 		
 		p1.getCategorias().addAll(Arrays.asList(cat1));
 		p2.getCategorias().addAll(Arrays.asList(cat1, cat2));

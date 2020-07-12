@@ -12,6 +12,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+//	Fazer mapeamento
 @Entity
 public class Produto implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -22,12 +24,18 @@ public class Produto implements Serializable {
 	private String nome;
 	private double preco;
 	
+//	Temos que associar e fazer mapeamento
 //	Um produto tem varias categorias, associando entre eles
+//	Json ja forma buscados agora nao busco mais
+	@JsonBackReference
 	@ManyToMany
+//	Definir quem vai ser a tabela q vai ser mt pra mt Tabela do meio
 	@JoinTable(name = "PRODUTO_CATEGORIA", 
+//	Nome do campo da tabela correspondete ao codigo do produto chave estrangeira
 	joinColumns = @JoinColumn(name = "produto_id"),
+//	Nome da outra chave estrangeira
 	inverseJoinColumns = @JoinColumn(name = "categoria_id")
-			)
+	)
 	private List<Categoria> categorias = new ArrayList<>();
 	
 	
