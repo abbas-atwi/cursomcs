@@ -10,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import com.nelioalves.cursomcs.domain.Categoria;
 import com.nelioalves.cursomcs.domain.Cidade;
 import com.nelioalves.cursomcs.domain.Cliente;
+import com.nelioalves.cursomcs.domain.Endereco;
 import com.nelioalves.cursomcs.domain.Estado;
 import com.nelioalves.cursomcs.domain.Produto;
 import com.nelioalves.cursomcs.domain.enums.TipoCliente;
