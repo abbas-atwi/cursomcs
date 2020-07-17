@@ -38,7 +38,6 @@ public class Categoria implements Serializable {
 	}
 	
 	
-	
 	public Categoria() {
 		
 	}
